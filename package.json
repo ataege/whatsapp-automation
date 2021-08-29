@@ -1,0 +1,30 @@
+{
+  "name": "wp-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon index",
+    "build": "npx babel src --out-dir lib",
+    "build:live": "npx babel src --out-dir lib --watch",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.14.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-jest": "^27.1.0",
+    "babel-node": "^0.0.1-security",
+    "core-js": "^3.16.3",
+    "jest": "^27.1.0",
+    "nodemon": "^2.0.12",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
