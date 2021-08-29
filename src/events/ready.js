@@ -1,4 +1,4 @@
-import contactsData from '../contacts.json';
+import contactsData from '../../contacts.json';
 import { sendMessageAtDate } from '../utils/sendMessage';
 
 export function handler(client) {

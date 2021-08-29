@@ -1,4 +1,4 @@
-import contactsData from '../contacts.json';
+import contactsData from '../../contacts.json';
 import { checkDate } from '../utils/dateChecker';
 
 export function sendMessageAtDate(client, contact) {
@@ -8,7 +8,7 @@ export function sendMessageAtDate(client, contact) {
 			contact.getChat().then((chat) => {
 				client.sendMessage(chat.id._serialized, contactData.content);
 				console.log(
-					`${contactData.content} sent to ${chat.name} (${chat.id.user})`
+					`"${contactData.content}" sent to ${chat.name} (${chat.id.user})`
 				);
 			});
 		} else return;
