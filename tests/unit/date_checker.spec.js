@@ -1,4 +1,4 @@
-import { checkDate } from '../src/utils/dateChecker';
+import { checkDate } from '../../src/utils/dateChecker';
 
 describe('checkDate', () => {
 	it('should return boolean', () => {
