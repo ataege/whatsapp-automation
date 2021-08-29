@@ -1,8 +1,14 @@
+import { Client, Contact } from 'whatsapp-web.js';
 import contactsData from '../../contacts.json';
-import { checkDate } from '../utils/dateChecker';
+import { checkDate } from './dateChecker';
 
-export function sendMessageAtDate(client, contact) {
-	const contactData = contactsData.find((val) => val.number == contact.id.user);
+export function sendMessageAtDate(client: Client, contact: Contact) {
+	const contactData = contactsData.find(
+		(val: Record<string, string>) => val.number == contact.id.user
+	);
+
+	if (!contactData) throw new Error("Can't find contacts.json file.");
+
 	setInterval(() => {
 		if (checkDate(contactData.sendAt)) {
 			contact.getChat().then((chat) => {
