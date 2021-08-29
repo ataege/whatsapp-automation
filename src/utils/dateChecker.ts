@@ -1,4 +1,4 @@
-export function checkDate(date) {
+export function checkDate(date: string) {
 	const currentDate = new Date();
 	const dateToCheck = new Date(date);
 	return (

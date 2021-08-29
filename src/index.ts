@@ -4,7 +4,7 @@ import { Client } from 'whatsapp-web.js';
 import { eventBinder } from './utils/eventBinder';
 import path from 'path';
 
-const client = new Client();
+const client = new Client({});
 
 eventBinder(path.resolve(__dirname, 'events'), client);
 
